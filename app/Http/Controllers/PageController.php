@@ -10,10 +10,10 @@ class PageController extends Controller
     {
         return view('home', ['title' => '- Home Page']);
     }
-    public function product()
+    /*public function product()
     {
         return view('product', ['title' => '- Home Product']);
-    }
+    }*/
     public function program()
     {
         return view('program', ['title' => '- Home Program' ]);

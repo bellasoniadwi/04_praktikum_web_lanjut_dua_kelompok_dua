@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 // Auth::routes();
 
 Route::get('/', [PageController::class, 'home']);
-Route::get('/product', [PageController::class, 'product']);
+Route::get('/product', [ProductController::class, 'index']);
 Route::get('/program', [PageController::class, 'program']);
 Route::get('/news', [PageController::class, 'news']);
 Route::get('/about', [PageController::class, 'about']);

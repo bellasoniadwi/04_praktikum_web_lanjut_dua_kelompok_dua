@@ -37,113 +37,48 @@
         <div class="container">
             <div class="row">
                 <div id="Grid">
-                <div class="mix category-1 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p1.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p1.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
+                    <section class="row justify-content-center">
+                        <div class="container-center" style="margin-top:45px">
+                            <table class="table table-bordered text-center">
+                                <style>
+                                    table,
+                                    td {
+                                        border: 1px solid #333;
+                                        text-align:center;
+                                    }
+                                    
+                                    thead,
+                                    tbody {
+                                        background-color: #222;
+                                        color: #fff;
+                                    }
+                                    th{
+                                        text-align: center;
+                                    }
+                                </style>
+                                <thead>
+                                    <tr>
+                                        <th>NOMOR</th>
+                                        <th>NAMA</th>
+                                        <th>GAMBAR</th>
+                                        <th>JENIS</th>
+                                        <th>DESKRIPSI</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($products as $p)
+                                    <tr>
+                                        <td>{{ $p->id }}</td>
+                                        <td>{{ $p->nama }}</td>
+                                        <td><img height="150" width="250" src="{{ $p->gambar }}" /></td>
+                                        <td>{{ $p->jenis }}</td>
+                                        <td>{{ $p->konten }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Premium</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p2.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p2.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Piano</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-3 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p3.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p3.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Teliti</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p4.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p4.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Belajar</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-1 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p5.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p5.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Juz Amma</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-3 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p6.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p6.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Doa</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-2 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p7.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p7.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Preschool</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                <div class="mix category-1 col-md-3 col-sm-6">
-                    <div class="thumb-p">
-                        <img src="{{ asset('style/images/p8.jpg') }}" alt="">
-                        <div class="overlay-p">
-                            <a href="{{ asset('style/images/p8.jpg') }}" data-rel="lightbox"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="content-p">
-                        <h4>Marbel Dinosaurus</h4>
-                        <span>Creative</span>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fourth-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>TIDAK MENEMUKAN BARANGMU?</h2>
-                    <a href="/contact">(CARI DISINI YUK)</a>
+                    </section>    
                 </div>
             </div>
         </div>
